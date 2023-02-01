@@ -1,9 +1,9 @@
-# Credit Submission Detectors using Machine Learning
+# Best Model for Heart Attack Prediction using Machine Learning
 
 #### -- Project Status: Completed
 
 ## Project Objective
-Credit scoring which helps in evaluating the repayment ability of potential borrowers is one of the most important issues for lending or loan business. At this time, the development of Machine Learning is very rapid and its use can be implemented in various ways, one of which is in lending or loan business. In this study, researchers used the Decision Tree model to determine debtors who did not repay their loans. This study will compare the performance of the three models including Decision Tree, Logistic Regression, and Support Vector Machine. The results show that the Decision Tree model works much better.
+Make the best model to predict heart attack for patients using machine learning. Three types of models are used: **Logistic Regression, Support Vector Machines, Decision Tree** and the results will be compared the accuracy and F1-score to determine the best model.
 
 ### Methods Used
 * Machine Learning
@@ -21,11 +21,25 @@ Credit scoring which helps in evaluating the repayment ability of potential borr
 * numpy
 * seaborn
 
-## Conclusion
-Based on the Classification Report, the highest F1-score was obtained in the decision tree model of 0.94 or 94%, the result of which is close to 1, indicating that the model performance is very good. This model uses parameters in the form of 'criterion':'gini','max_depth': 8,'max_features': 'log2','splitter': 'best'.
-The interpretation of the results obtained by researchers has the conclusion that to find out whether a debtor is eligible to receive credit or not by taking into account the amount of annual income, loan class, interest rate, percent of income, home ownership
-mortgage/rent, history of default. In the application that is formed, when it is submitted, it will appear approved or rejected according to the eligibility level of the recipient of the credit customer.
+## Step-by-step
+1. It will be checked whether the data is ready to use by checking
+    - Missing value
+    - Outliers
+2. Perform **feature selection** by using **Pearson Correlation** or comparing the correlation variable with the target variable, namely output
+3. Visualize the correlation between variables with a heat map
+4. Calculate the mean correlation and take the features with a greater correlation than the mean
+5. Extract these features into data X and the target variable as data Y
+6. Split the data into training data and testing data with a ratio of 8:2
+7. Will use **Logistic Regression, Deision Tree, and Support Vector Machine **with
+   - Choose the best parameters by hypertuning
+   - Print reports from the Logistic Regression model
+
+Conclusions are reached by analyzing the test and train scores that have been obtained for each model, it is obtained
+1. The Logistic Regression model has the highest test score but there is a significant difference from the train score, which allows overfitting to occur.
+2. The Decision Tree model produces a train score of 1 so that it allows overfitting to occur
+3. The SVM model has a fairly high test score and when compared to the train score there is not too much difference so the possibility of overfitting is low
+So, the best model to predict this dataset is **Support Vector Machine Method.**
 
 ## Getting Started
-1. You can access the raw data [here](https://github.com/angelpatriciads/credit-cark-risk-classification/blob/main/credit_risk_dataset.csv) within this repo.
-2. All of the scripts are being kept [here](https://github.com/angelpatriciads/credit-cark-risk-classification/blob/main/credit_risk_classification.ipynb).
+1. You can access the raw data [here](https://github.com/angelpatriciads/heart-attack-prediction/blob/main/heart_attack_dataset.csv) within this repo.
+2. All of the scripts are being kept [here](https://github.com/angelpatriciads/heart-attack-prediction/blob/main/heart_attack_prediction.ipynb).
