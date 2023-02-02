@@ -43,3 +43,4 @@ So, the best model to predict this dataset is **Support Vector Machine Method.**
 ## Getting Started
 1. You can access the raw data [here](https://github.com/angelpatriciads/heart-attack-prediction/blob/main/heart_attack_dataset.csv) within this repo.
 2. All of the scripts are being kept [here](https://github.com/angelpatriciads/heart-attack-prediction/blob/main/heart_attack_prediction.ipynb).
+ 
